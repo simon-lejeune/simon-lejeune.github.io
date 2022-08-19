@@ -1,82 +1,545 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1P13WQMJ8"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-N1P13WQMJ8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-          gtag('config', 'G-N1P13WQMJ8');
-        </script>
+      gtag("config", "G-N1P13WQMJ8");
+    </script>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>slap.agency - Simon Lejeune</title>
-        <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-    </head>
-    <body>
-        <section class="hero is-info is-medium is-bold">
-            <div class="hero-head has-text-centered">
-                <img src="logo.svg" class="mt-5" style="max-width: 35%;"/>
-            </div>
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <h1 class="title">
-                        Freelance Full Stack Developer
-                    </h1>
-                    <h2 class="subtitle">
-                        I'm Simon Lejeune, a software developer located in Belgium. Programming is something I'm passionate about, but I foremost love building useful and polished products, including business apps.
-                    </h2>
-                </div>
-            </div>
-        </section>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slap Agency - Simon Lejeune</title>
 
-        <div class="box cta">
-            <p class="has-text-centered">
-            Want me to help you build your next project? Reach out at <a href="mailto:simon@slap.agency">simon@slap.agency</a> or on <a href="https://www.linkedin.com/in/simon-lejeune-5918221a6/">linkedin</a>.
-            </p>
+    <link href="assets/output.css" rel="stylesheet" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        font-family: "Poppins", sans-serif !important;
+      }
+    </style>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <script>
+      window.addEventListener("load", () => {
+        const toggleMenuButton = document.querySelector(
+          "#toggle-mobile-menu-button"
+        );
+        const mobileMenu = document.querySelector("#mobile-menu");
+
+        toggleMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+  </head>
+  <body class="subpixel-antialiased">
+    <div
+      id="hero"
+      class="h-screen w-full bg-cover bg-center bg-no-repeat"
+      style="background-image: url('assets/bg2.jpg')"
+    >
+      <!-- https://tailwindcomponents.com/component/tailwind-header -->
+      <nav class="border-gray-200 bg-white px-4 py-2.5 lg:px-6">
+        <div
+          class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between"
+        >
+          <a href="#" class="flex items-center">
+            <img
+              src="assets/slap-agency-logo-3.svg"
+              class="mr-3 h-16"
+              alt="Slap Agency Logo"
+            />
+          </a>
+          <div class="flex items-center lg:hidden">
+            <button
+              id="toggle-mobile-menu-button"
+              type="button"
+              class="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <svg
+                class="hidden h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="hidden w-full items-center justify-between lg:flex lg:w-auto"
+            id="mobile-menu"
+          >
+            <ul
+              class="mt-4 flex flex-col font-medium lg:mt-0 lg:flex-row lg:space-x-8"
+            >
+              <li>
+                <a
+                  href="#about"
+                  class="block border-b border-gray-100 py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-green-300"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="block border-b border-gray-100 py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-green-300"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#clients"
+                  class="block border-b border-gray-100 py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-green-300"
+                  >Clients</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#resume"
+                  class="block border-b border-gray-100 py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-green-300"
+                  >Resume</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="block border-b border-gray-100 py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-green-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+      <div
+        class="flex h-screen w-full items-center justify-center bg-black bg-opacity-50"
+      >
+        <div>
+          <img
+            class="w-36 rounded-full"
+            src="assets/me.png"
+            alt="Picture of myself"
+          />
+        </div>
+        <div class="mx-4 text-center text-white">
+          <h1 class="mb-4 text-6xl font-bold">Olá!</h1>
+          <h2 class="mb-12 text-3xl font-bold">
+            I'm Simon, a remote software developer
+          </h2>
+        </div>
+      </div>
+    </div>
 
-        <section class="container mt-4 pt-6">
-            <div class="columns has-text-justified">
-                <div class="column is-5 is-offset-1">
-                    <div class="card is-shady" style="height: 100%;">
-                        <div class="card-content">
-                            <div class="content">
-                                <h4>Web Development</h4>
-                                <p>
-                                I can help you in your web development projects by bringing my expertise in Javascript and Python.
-                                This includes the management of large codebases and their refactorings, implementation of best practices and also the monitoring
-                                and improvement of the performance at both sides of the stack (back and front).
-                                </p>
-                                <p>I possess expertise in HTML, Javascript (vanilla, vue.js), CSS, Python (Flask), PostgreSQL, SQLAlchemy but I'm always eager to learn new technologies.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-5">
-                    <div class="card is-shady" style="height: 100%;">
-                        <div class="card-content">
-                            <div class="content">
-                                <h4>Odoo</h4>
-                                <p>Having worked 7 years for the editor in the R&amp;D department, I can help you in the following topics:
-                                <ul>
-                                    <li>translation of functional needs into technical specifications</li>
-                                    <li>validation of technical specifications</li>
-                                    <li>costs and resources estimation</li>
-                                    <li>MVP implementation</li>
-                                    <li>leading the development process</li>
-                                    <li>coaching the members of your team</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div
+      id="about"
+      class="flex flex-col items-center justify-between bg-white p-4 pb-12"
+    >
+      <div class="flex">
+        <h2 class="text-6xl font-semibold">About</h2>
+        <h2 class="text-6xl font-semibold text-green-300">.</h2>
+      </div>
+      <section class="container mx-auto mt-10">
+        <p>
+          I am a software consultant working with companies of all sizes on web
+          and mobile products.<br />
+          I’m specialized in Python and Javascript and can work frontend,
+          backend and devops roles.<br />
+          I am also able to dig deep in the stack to understand and fix
+          performance and security issues.<br /><br />
+          Before becoming a freelancer, I helped
+          <a
+            class="hover:text-green-300"
+            href="https://www.odoo.com/"
+            target="blank"
+            >Odoo</a
+          >
+          improve their Logistics app during seven years.<br /><br />
+          I'm used to work in remote environments and right now I'm working from
+          Portugal.<br />My native language is French, I'm fluent in English and
+          I'm learning Portuguese.
+        </p>
+        <div class="mt-6 flex">
+          <h2 class="text-2xl font-semibold">Tech stack</h2>
+          <h2 class="text-2xl font-semibold text-green-300">.</h2>
+        </div>
+        <p>
+          I'm passionate about learning and have hands on experience with the
+          following technologies:
+        </p>
+        <!-- frontend -->
+        <div class="flex flex-row flex-wrap items-center justify-center">
+          <div
+            class="m-4 flex h-24 w-24 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-react text-2xl text-green-300"></i>
             </div>
-        </section>
-    </body>
-</html>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">React</div>
+            </div>
+          </div>
+          <div
+            class="m-4 flex h-24 w-24 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-angular text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">Angular</div>
+            </div>
+          </div>
+          <div
+            class="m-4 flex h-24 w-24 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-vuejs text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">Vue</div>
+            </div>
+          </div>
+          <div
+            class="m-4 flex h-24 w-28 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-javascript text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">Javascript</div>
+            </div>
+          </div>
+          <div
+            class="m-4 flex h-24 w-28 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-javascript text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">Typescript</div>
+            </div>
+          </div>
+          <!-- backend -->
+          <div
+            class="m-4 flex h-24 w-24 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-django text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">Django</div>
+            </div>
+          </div>
+          <div
+            class="m-4 flex h-24 w-24 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-flask text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">Flask</div>
+            </div>
+          </div>
+          <div
+            class="m-4 flex h-24 w-24 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-python text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">FastAPI</div>
+            </div>
+          </div>
+          <div
+            class="m-4 flex h-24 w-28 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-python text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">Python</div>
+            </div>
+          </div>
+          <!-- database -->
+          <div
+            class="m-4 flex h-24 w-36 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-postgresql text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">PostgreSQL</div>
+            </div>
+          </div>
+          <!-- devops -->
+          <div
+            class="m-4 flex h-24 w-24 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-aws text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">AWS</div>
+            </div>
+          </div>
+          <div
+            class="m-4 flex h-24 w-36 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-kubernetes text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">Kubernetetes</div>
+            </div>
+          </div>
+          <!-- odoo -->
+          <div
+            class="m-4 flex h-24 w-24 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-python text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">Odoo</div>
+            </div>
+          </div>
+          <!-- random -->
+          <div
+            class="m-4 flex h-24 w-24 transform flex-col items-center justify-center rounded shadow-lg transition duration-500 hover:scale-110"
+          >
+            <div class="">
+              <i class="bx bxl-git text-2xl text-green-300"></i>
+            </div>
+            <div class="">
+              <div class="mb-2 text-lg font-bold">Git</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
+    <div
+      id="services"
+      class="flex flex-col items-center justify-between bg-gray-50 p-4 pb-12"
+    >
+      <div class="flex">
+        <h2 class="text-6xl font-semibold">Services</h2>
+        <h2 class="text-6xl font-semibold text-green-300">.</h2>
+      </div>
+      <section class="container mx-auto mt-10">
+        <p>My rate starts at 500€ per day for the following services:</p>
+        <ul class="ml-6 list-disc">
+          <li>Backend web development</li>
+          <li>Frontend web development</li>
+          <li>Mobile app development</li>
+          <li>DevOps / Cloud architecture</li>
+          <li>Code review</li>
+          <li>Training</li>
+          <li>Odoo development</li>
+        </ul>
+      </section>
+    </div>
+
+    <div
+      id="clients"
+      class="flex flex-col items-center justify-between bg-white p-4 pb-12"
+    >
+      <div class="flex">
+        <h2 class="text-6xl font-semibold">Clients</h2>
+        <h2 class="text-6xl font-semibold text-green-300">.</h2>
+      </div>
+      <section class="container mx-auto mt-10">
+        <ul class="ml-6 list-disc">
+          <li>
+            <a
+              class="hover:text-green-300"
+              href="https://ubidata.com/en/"
+              target="_blank"
+              >UbiData</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-green-300"
+              href="https://belighted.com/"
+              target="_blank"
+              >Belighted</a
+            >
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div
+      id="resume"
+      class="flex flex-col items-center justify-between bg-gray-50 p-4 pb-12"
+    >
+      <div class="flex">
+        <h2 class="text-6xl font-semibold">Resume</h2>
+        <h2 class="text-6xl font-semibold text-green-300">.</h2>
+      </div>
+      <section class="container mx-auto mt-10 flex items-center justify-center">
+        <button
+          class="inline-flex w-full max-w-lg items-center justify-center rounded bg-green-300 py-2 px-4 font-bold text-white shadow hover:bg-green-400"
+        >
+          <svg
+            class="mr-2 h-4 w-4 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+          </svg>
+          <a href="assets/simon-lejeune-resume.pdf" download>download</a>
+        </button>
+      </section>
+    </div>
+
+    <div
+      id="contact"
+      class="flex flex-col items-center justify-between bg-white p-4 pb-12"
+    >
+      <div class="flex">
+        <h2 class="text-6xl font-semibold">Get in touch</h2>
+        <h2 class="text-6xl font-semibold text-green-300">.</h2>
+      </div>
+      <section class="container mx-auto mt-10 flex items-center justify-center">
+        <form
+          class="w-full max-w-lg"
+          action="https://formsubmit.co/simon@slap.agency"
+          method="POST"
+        >
+          <div class="-mx-3 mb-6 flex flex-wrap">
+            <div class="w-full px-3">
+              <label
+                class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
+                for="grid-password"
+              >
+                Email
+              </label>
+              <input
+                class="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+                id="email"
+                type="email"
+                name="email"
+                required
+              />
+            </div>
+          </div>
+          <div class="-mx-3 mb-6 flex flex-wrap">
+            <div class="w-full px-3">
+              <label
+                class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
+                for="grid-password"
+              >
+                Message
+              </label>
+              <textarea
+                name="message"
+                required
+                class="no-resize mb-3 block h-48 w-full resize-none appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+                id="message"
+              ></textarea>
+            </div>
+          </div>
+          <div class="">
+            <button
+              class="w-full rounded bg-green-300 py-2 px-4 font-bold text-white shadow hover:bg-green-400"
+              type="submit"
+            >
+              send
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <div class="mt-10">
+        <a href="https://github.com/simon-lejeune" class="pl-4">
+          <i class="bx bxl-github text-2xl hover:text-green-300"></i>
+        </a>
+        <a href="mailto:simon@slap.agency" class="pl-4">
+          <i class="bx bxl-gmail text-2xl hover:text-green-300"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/simon-lejeune-5918221a6/"
+          class="pl-4"
+        >
+          <i class="bx bxl-linkedin text-2xl hover:text-green-300"></i>
+        </a>
+      </div>
+    </div>
+
+    <div
+      id="footer"
+      class="flex flex-col items-center justify-center bg-gray-50 p-1"
+    >
+      <div class="mt-2 block text-sm">VAT PT306307006</div>
+      <img
+        class="block w-44"
+        src="assets/slap-agency-logo.svg"
+        alt="Slap agency logo"
+      />
+      <div class="block text-sm">© 2020 - 2022 Simon Lejeune</div>
+      <div class="block text-sm">All Rights Reserved</div>
+    </div>
+  </body>
+</html>
